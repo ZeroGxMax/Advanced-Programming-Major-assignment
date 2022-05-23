@@ -1,0 +1,10 @@
+const int NORMAL_RATE = 2;
+const int TOTAL_RATE_4_17 = 51;
+const int TOTAL_RATE_5_16 = 19;
+const int TOTAL_RATE_6_15 = 15;
+const int TOTAL_RATE_7_14 = 13;
+const int TOTAL_RATE_8_13 = 9;
+const int TOTAL_RATE_9_12 = 7;
+const int TOTAL_RATE_10_11 = 7;
+const int TRIPLE_RATE = 181;
+const int DICE_RATE[3] = {2, 3, 4};
