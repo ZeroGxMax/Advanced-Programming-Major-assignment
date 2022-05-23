@@ -26,6 +26,7 @@ B, Mô tả chung về trò chơi:
 •	Các ô tổng (4-17): Đã ghi rõ trên bàn cờ
 •	Các xúc sắc: 1 xúc sắc trùng là 1:1, 2 xúc sắc trùng là 1:2, 3 xúc sắc trùng là 1:3.
 -	Luật chơi: Có thể tham khảo https://sanhrong.info/game-tai-xiu/luat-choi, 
+
 C, Các chức năng đã cài đặt:
 1.	Menu:
 -	Game có main menu: Click vào Bắt đầu để chơi game, click vào Thoát để thoát game
@@ -55,6 +56,7 @@ C, Các chức năng đã cài đặt:
 7.	Trò chơi mới:
 -	Click vào vị trí bất kỳ trên màn hình để bắt đầu trò chơi mới.
 *) Link video: https://youtu.be/KjZKzVcNzyg, 
+
 D, Các kỹ thuật lập trình:
 -	Cơ bản: Mảng, con trỏ, kiểu dữ liệu tự định nghĩa (struct, enum), switch, if else
 -	Các hàm sinh số ngẫu nhiên (từ 1-6 cho xúc xắc).
@@ -71,6 +73,7 @@ D, Các kỹ thuật lập trình:
 -	Xử lý Event:
 +, Xử lý Mouse Event (cụ thể là click)
 +, Xử lý Keydown Event
+
 E, Kết luận và tâm đắc rút ra được:
 1.	Kết luận:
 -	Về mặt Gameplay, trò chơi đã được làm tương đối hoàn thiện (đã làm được tất cả các hàm đặt cược, xúc sắc, hiển thị xúc sắc, hệ thống tiền tệ và hệ thống tiền thưởng hoàn thiện).
