@@ -54,7 +54,7 @@ C, Các chức năng đã cài đặt:
 -	Cập nhật kết quả của trò chơi.
 7.	Trò chơi mới:
 -	Click vào vị trí bất kỳ trên màn hình để bắt đầu trò chơi mới.
-*) Link video:
+*) Link video: https://youtu.be/KjZKzVcNzyg, 
 D, Các kỹ thuật lập trình:
 -	Cơ bản: Mảng, con trỏ, kiểu dữ liệu tự định nghĩa (struct, enum), switch, if else
 -	Các hàm sinh số ngẫu nhiên (từ 1-6 cho xúc xắc).
@@ -71,5 +71,40 @@ D, Các kỹ thuật lập trình:
 -	Xử lý Event:
 +, Xử lý Mouse Event (cụ thể là click)
 +, Xử lý Keydown Event
+E, Kết luận và tâm đắc rút ra được:
+1.	Kết luận:
+-	Về mặt Gameplay, trò chơi đã được làm tương đối hoàn thiện (đã làm được tất cả các hàm đặt cược, xúc sắc, hiển thị xúc sắc, hệ thống tiền tệ và hệ thống tiền thưởng hoàn thiện).
+-	Về mặt các lỗi của trò chơi: Cho tới hiện tại, chưa tìm ra lỗi lớn nào cả.
+-	Về mặt hiệu năng: Trung bình, game chạy ổn, không quá lag.
+-	Về mặt đồ họa:
+•	Đồ họa game trung bình kém, các hình ảnh trong game còn sơ sài, chắp vá, thiếu ăn ý với nhau.
+•	Khuyết thiếu hình ảnh động (Xúc sắc đứng yên một chỗ)
+•	Hệ thống tiền tệ chỉ có thể render số (nếu là hình các chip sẽ đẹp hơn).
+-	Về mặt âm thanh:
+•	Âm nhạc trong game đã đầy đủ, tuy nhiên nên cho thêm người chơi lựa chọn âm nhạc
+•	Hệ thống SFX còn thiếu thốn (Tốt nhất là khi lăn xúc sắc xong, có SFX đọc số các xúc sắc và tổng)
+-	Về mặt độ thân thiện người dùng:
+•	Game tương đối đơn giản, dễ chơi (miễn là biết được luật)
+•	Tuy nhiên, nên tăng thêm chức năng đánh giá số tiền kiếm được sau khi đặt vào một vị trí nào đó (Để cho người chơi dễ tính toán).
+-	Về mặt độ thu hút trò chơi:
+•	Trò chơi có chút nhàm chán, lặp lại (chỉ có đặt cược – nhận tiền – đặt cược)
+•	Có thể thêm chức năng thử thách (ví dụ yêu cầu đặt cược ô xác định và kiếm được bao nhiêu tiền), chức năng shop vật phẩm, chức năng chơi với máy (máy chọn ngẫu nhiên một ô và cược tiền).
+2.	Tâm đắc:
+-	Handle button event: Tạo ra hàm struct LButton và tạo hàm isInside() để kiểm soát nó. Đồng thời, có thể sử dụng SDL_Rect để chia khu vực cho Button
+-	Chia trò chơi thành từng giai đoạn:
+•	Dùng Enum để chia giai đoạn cho trò chơi
+•	Dùng lệnh if để kiểm soát từng giai đoạn của trò chơi và các hàm bên trong nó
+-	Render Text: Sử dụng TTF để render Text, muốn render Text có số bất kỳ, phải trải qua một loạt thao tác
+string message = "Total: ";
+    char total[3];
+    sprintf(total, "%d", TotalOfThreeDice);
+    string sTotal = string(total);
+    sTotal = message + sTotal;
+    gTextTotal.loadFromRenderedText(sTotal.c_str(), BLACK_COLOR);
+    gTextTotal.render(totalTextPos.x, totalTextPos.y, NULL);
+    SDL_RenderPresent(gRenderer);
+3.	Hướng phát triển:
+-	Cải tiến đồ họa: Hệ thống tiền tệ dùng các chips, thêm hình ảnh động cho xúc sắc
+-	Cải tiến chức năng trò chơi: Chức năng đánh giá số tiền kiếm được sau khi đặt vào một vị trí nào đó, chức năng thử thách, chức năng AI, chức năng shop, chức năng vật phẩm/thời trang.
+-	Cải tiến âm thanh trò chơi: Có SFX đọc số các xúc sắc và tổng, nhiều bản nhạc hơn và cho phép người chơi chọn.
 
-E, Tâm đắc rút ra được:
