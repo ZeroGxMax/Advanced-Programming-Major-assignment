@@ -29,19 +29,24 @@ A, Hướng dẫn cài đặt:
 •	Trong “Edit the system environment variables”, vào phần Advanced. Ở đó có phần Environment Variables, click vào
 •	Trong phần User Variable, click đúp vào PATH. Sau đó, ta copy đường dẫn của file bin vừa tải xuống vào ô trống bất kỳ.
 •	Click vào OK, sau đó Apply
+-	Copy folder include và lib ra bên ngoài:
+•	Trong folder Version 4.0, có folder include và lib, ta copy 2 folder đó.
+•	Tại ổ D, ta tạo một thư mục mới, đặt tên là SRC.
+•	Ta paste hai thư mục vừa đặt tên ra folder SRC.
 -	Tạo file thi hành exe của game:
 •	Vào Visual Studio Code, nhấn tổ hợp Ctrl + K +Ctrl + O.
 •	Trong cửa sổ hiện ra, tìm kiếm và vào folder Version 4.0 vừa tải xuống từ Github rồi click vào Select Folder.
 •	VSC sẽ hiện ra nội dung bên trong folder.
-•	Trong folder có file Makefile, click vào nó rồi thay đổi code thành như sau:
+•	Trong folder có file Makefile, click vào nó rồi thay đổi code thành như sau (nếu như đã thực hiện bước copy folder include và lib ra bên ngoài thì có thể bỏ qua).
 all:  
     g++ -I(DIR to Include) -L(DIR to Library) -o main main.cpp -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_ttf -lSDL2_mixer
-trong đó DIR to Include và DIR to library là đường dẫn đến folder include và lib trong folder Version 4.0 vừa tải xuống.
+trong đó DIR to Include và DIR to library là đường dẫn đến folder include và lib trong folder Version 4.0 vừa tải xuống (Lưu ý: Phải copy hai folder trên ra thư mục riêng)
 •	Click vào Terminal ở thanh trên của VSC, click vào New terminal.
 •	Trong Terminal vừa mới hiện ra, gõ lệnh
 mingw32-make
 khi đó, file main.exe được tạo ra
 -	Vào file main.exe để chơi game.
+
 
 B, Mô tả chung về trò chơi:
 -	Tên trò chơi: Tài Xỉu (Sicbo trong Tiếng Anh)
