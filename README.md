@@ -1,17 +1,46 @@
 # Advanced-Programming-Major-assignment
 A, Hướng dẫn cài đặt:
+1.	Cài đặt Visual Studio Code:
+-	Vào trang: https://code.visualstudio.com/, click vào Download for Window
+-	Khi tải xuống thành công, tiến hành chạy file cài đặt, liên tục ấn Next – Next – Next là xong.
+-	Ấn vào Extensions trong VSC hoặc Ctrl + Shift + X, để mở giao diện. Tiếp theo gõ trên thanh tìm kiếm từ khóa “C++”, sau đó chọn extension C/C++ do Microsoft phát hành và ấn Install để cài đặt.
+2.	Cài đặt môi trường:
+-	Vào trang https://winlibs.com/.
+-	Tại phần Release Version, kéo xuống phần MSVCRT runtime, thanh GCC 11.3.0 + LLVM/Clang/LLD/LLDB 14.0.3 + MinGW-w64 10.0.0 (MSVCRT) - release 3.
+-	Click vào Win64: 7-Zip archive* ( phần có chứa đầy đủ LLVM/Clang/…) để tải xuống.
+-	Sau khi thành công tải xuống, tạo một thư mục trong ổ C, copy và paste file tải xuống vào thư mục mới tạo rồi giải nén.
+-	Giải nén xong, click vào folder mingw64, sau đó click vào folder x86_64-w64-mingw32, ở trong đó có folder bin.
+*) Copy đường dẫn:
+-	Nhấn tổ hợp Window + S, gõ “Edit the system environment variables”, click vào ứng dụng hiện ra.
+-	Trong “Edit the system environment variables”, vào phần Advanced. Ở đó có phần Environment Variables, click vào
+-	Trong phần System Variable, click đúp vào PATH. Sau đó, ta copy đường dẫn của file bin vừa tải xuống vào ô trống bất kỳ.
+-	Làm tương tự với phần User Variable.
+-	Click vào OK, sau đó Apply.
+3.	Cài đặt game:
 -	Tải xuống folder Version 4.0 trên Github.
--	Trong folder vừa tải xuống có file bin: Vào “Edit the system environment variables”, phần Advanced, click vào Environment Variables rồi add đường dẫn đến file bin vào phần path.
--	Khởi động game folder Version 4.0 với Visual Studio Code
--	Tạo Make file với code sau:
+•	Vào trang: https://github.com/ZeroGxMax/Advanced-Programming-Major-assignment
+•	Click vào phần Code rồi click vào Download Zip.
+•	File Advanced-Programming-Major-assignment-main.zip được tải xuống.
+•	Tạo một thư mục trong ổ D, copy và paste file tải xuống vào thư mục mới tạo rồi giải nén.
+•	Trong folder Advanced-Programming-Major-assignment-main được giải nén có folder Version 4.0 (ta ghi nhớ vị trí của folder này).
+-	Trong folder vừa tải xuống có file bin: 
+•	Nhấn tổ hợp Window + S, gõ “Edit the system environment variables”, click vào ứng dụng hiện ra.
+•	Trong “Edit the system environment variables”, vào phần Advanced. Ở đó có phần Environment Variables, click vào
+•	Trong phần User Variable, click đúp vào PATH. Sau đó, ta copy đường dẫn của file bin vừa tải xuống vào ô trống bất kỳ.
+•	Click vào OK, sau đó Apply
+-	Tạo file thi hành exe của game:
+•	Vào Visual Studio Code, nhấn tổ hợp Ctrl + K +Ctrl + O.
+•	Trong cửa sổ hiện ra, tìm kiếm và vào folder Version 4.0 vừa tải xuống từ Github rồi click vào Select Folder.
+•	VSC sẽ hiện ra nội dung bên trong folder.
+•	Trong folder có file Makefile, click vào nó rồi thay đổi code thành như sau:
 all:  
-    g++ -I<DIR to Include> -L<DIR to Library> -o main main.cpp -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_ttf -lSDL2_mixer
-trong đó DIR to Include và DIR to library là đường dẫn đến folder include và library trong folder Version 4.0
--	Gọi lệnh
+    g++ -I(DIR to Include) -L(DIR to Library) -o main main.cpp -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_ttf -lSDL2_mixer
+trong đó DIR to Include và DIR to library là đường dẫn đến folder include và lib trong folder Version 4.0 vừa tải xuống.
+•	Click vào Terminal ở thanh trên của VSC, click vào New terminal.
+•	Trong Terminal vừa mới hiện ra, gõ lệnh
 mingw32-make
-trong terminal sẽ tạo file main.exe
+khi đó, file main.exe được tạo ra
 -	Vào file main.exe để chơi game.
-
 B, Mô tả chung về trò chơi:
 -	Tên trò chơi: Tài Xỉu (Sicbo trong Tiếng Anh)
 -	Mô tả: Tài xỉu hay còn gọi là sicbo là trò chơi dân gian nổi tiếng bắt nguồn từ Trung Quốc cổ đại. Đánh Tài xỉu là trò chơi dựa trên 3 viên xí ngầu (hay còn gọi là xúc xắc) - mỗi viên xí ngầu có 6 mặt (1, 2, 3, 4, 5, 6). Người chơi sẽ đặt cược kết quả của xí ngầu trước mỗi lần quay.
@@ -110,4 +139,3 @@ string message = "Total: ";
 -	Cải tiến đồ họa: Hệ thống tiền tệ dùng các chips, thêm hình ảnh động cho xúc sắc
 -	Cải tiến chức năng trò chơi: Chức năng đánh giá số tiền kiếm được sau khi đặt vào một vị trí nào đó, chức năng thử thách, chức năng AI, chức năng shop, chức năng vật phẩm/thời trang.
 -	Cải tiến âm thanh trò chơi: Có SFX đọc số các xúc sắc và tổng, nhiều bản nhạc hơn và cho phép người chơi chọn.
-
