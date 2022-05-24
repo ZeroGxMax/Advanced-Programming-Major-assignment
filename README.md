@@ -24,7 +24,7 @@ A, Hướng dẫn cài đặt:
 •	File Advanced-Programming-Major-assignment-main.zip được tải xuống.
 •	Tạo một thư mục trong ổ D, copy và paste file tải xuống vào thư mục mới tạo rồi giải nén.
 •	Trong folder Advanced-Programming-Major-assignment-main được giải nén có folder Version 4.0 (ta ghi nhớ vị trí của folder này).
--	Trong folder vừa tải xuống có file bin: 
+-	Trong folder Version 4.0 vừa tải xuống có file bin: 
 •	Nhấn tổ hợp Window + S, gõ “Edit the system environment variables”, click vào ứng dụng hiện ra.
 •	Trong “Edit the system environment variables”, vào phần Advanced. Ở đó có phần Environment Variables, click vào
 •	Trong phần User Variable, click đúp vào PATH. Sau đó, ta copy đường dẫn của file bin vừa tải xuống vào ô trống bất kỳ.
@@ -42,6 +42,7 @@ trong đó DIR to Include và DIR to library là đường dẫn đến folder i
 mingw32-make
 khi đó, file main.exe được tạo ra
 -	Vào file main.exe để chơi game.
+
 B, Mô tả chung về trò chơi:
 -	Tên trò chơi: Tài Xỉu (Sicbo trong Tiếng Anh)
 -	Mô tả: Tài xỉu hay còn gọi là sicbo là trò chơi dân gian nổi tiếng bắt nguồn từ Trung Quốc cổ đại. Đánh Tài xỉu là trò chơi dựa trên 3 viên xí ngầu (hay còn gọi là xúc xắc) - mỗi viên xí ngầu có 6 mặt (1, 2, 3, 4, 5, 6). Người chơi sẽ đặt cược kết quả của xí ngầu trước mỗi lần quay.
