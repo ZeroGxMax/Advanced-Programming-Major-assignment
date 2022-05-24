@@ -3,7 +3,8 @@ A, Hướng dẫn cài đặt:
 1.	Cài đặt Visual Studio Code:
 -	Vào trang: https://code.visualstudio.com/, click vào Download for Window
 -	Khi tải xuống thành công, tiến hành chạy file cài đặt, liên tục ấn Next – Next – Next là xong.
--	Ấn vào Extensions trong VSC hoặc Ctrl + Shift + X, để mở giao diện. Tiếp theo gõ trên thanh tìm kiếm từ khóa “C++”, sau đó chọn extension C/C++ do Microsoft phát hành và ấn Install để cài đặt.
+-	Vào Visual Studio Code (Biểu tượng trên màn hình Desktop).
+-	Trong VSC nhấn tổ hợp Ctrl + Shift + X. Tiếp theo gõ trên thanh tìm kiếm từ khóa “C++”, sau đó chọn extension C/C++ (C/C++ IntelliSense, debugging, and code browsing) do Microsoft phát hành và ấn Install để cài đặt.
 2.	Cài đặt môi trường:
 -	Vào trang https://winlibs.com/.
 -	Tại phần Release Version, kéo xuống phần MSVCRT runtime, thanh GCC 11.3.0 + LLVM/Clang/LLD/LLDB 14.0.3 + MinGW-w64 10.0.0 (MSVCRT) - release 3.
